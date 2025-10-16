@@ -169,49 +169,6 @@ hr {
     transition: 0.5s;
     cursor: pointer;
 }
-
-/* Arrow styling */
-.arrow {
-    transform: rotate(-90deg);
-    /* arrow pointing upward */
-    cursor: pointer;
-}
-
-.arrow span {
-    display: block;
-    width: 1.3vw;
-    height: 1.3vw;
-    border-bottom: 5px solid white;
-    border-right: 5px solid white;
-    transform: rotate(45deg);
-    margin: -10px;
-    animation: animate 2s infinite;
-}
-
-.arrow span:nth-child(2) {
-    animation-delay: -0.2s;
-}
-
-.arrow span:nth-child(3) {
-    animation-delay: -0.4s;
-}
-
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
-    }
-}
-
 .projects {
     margin-top: 50px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -234,9 +191,7 @@ hr {
 }
 .project-item:hover {
     background-color: #333;
-    transition: 0.5s;
-    cursor: pointer;
-    border: 1px solid #555;
+    border: 1px solid #b2b2b2;
 
 }
 
@@ -251,6 +206,7 @@ hr {
     letter-spacing: 0.5px;
     line-height: 40px;
     margin-top: 30px;
+    margin-right: 5.5%;
 }
 .project-list button {
     background-color: #444;
@@ -264,5 +220,82 @@ hr {
 }
 .project-list button:hover {
     background-color: #555;
-    transition: 0.3s;
+}
+.project-list svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: #fff;
+    vertical-align: middle;
+}
+.skillsh2 {
+    font-size: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ddd;
+    margin-left: 8.9%;
+    margin-right: 5.5%;
+    margin-bottom: 40px;
+    margin-top: 80px;
+}
+
+.skills-container {
+    display: flex;
+    gap: 40px; /* space between skill boxes */
+    justify-content: space-between;
+    margin-left: 8.9%;
+    margin-right: 5.5%;
+    flex-wrap: wrap; /* allows responsive wrap */
+}
+
+.skills {
+    flex: 1;
+    min-width: 300px;
+    font-family: 'Roboto Condensed', sans-serif;
+    border: 1px solid #333;
+    padding: 20px;
+    padding-bottom: 60px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+.skills p {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+.skills hr {
+    border: 0.5px solid #555555;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.skill-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+    margin-top: 30px;
+    list-style: none;
+    
+}
+.skill-list li {
+    background-color: #444;
+    padding: 0px 15px;
+    border-radius: 5px;
+}
+
+.skill-list li:hover {
+    background-color: #6c6c6c;
+    border: 1px solid #b2b2b2;
+}
+
+.skills-container :hover {
+    cursor: default;
+    background-color: #222;
+    transition: 0.5s;
 }
