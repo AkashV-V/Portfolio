@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .typewriter {
+            display: inline-block;
+            border-right: 2px solid #fff;
+            padding-right: 5px;
+            animation: blink 0.7s step-end infinite;
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: #fff;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -19,14 +39,17 @@
             </ul>
         </nav>
     </header>
+
     <div class="about-section" id="about">
         <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
-        <p>Hi, I'm Akash — a tech enthusiast passionate about web and game development, front-end design and
-            C++ programming to bring ideas to life.</p>
+        <p>Hi, I'm <span class="typewriter" id="typewriter"></span> — a tech enthusiast passionate about web and game
+            development, front-end design and C++ programming to bring ideas to life.</p>
     </div>
+
     <div class="bg-img">
         <img src="images/curious.webp" alt="curious">
     </div>
+
     <div class="info">
         <h2>Front-End <p>and</p><br>Programming</h2>
     </div>
@@ -44,10 +67,13 @@
             and bridging the gap between functionality and user experience. Driven by a passion for clean design and
             meaningful digital interactions.</p>
     </div>
+
     <div class="history">
         <h2>||HISTORY||</h2>
     </div>
+
     <hr>
+
     <div class="projects" id="projects">
         <h2>PROJECTS</h2>
         <div class="project-list">
@@ -79,6 +105,7 @@
             </div>
         </div>
     </div>
+
     <hr>
 
     <div id="skills">
@@ -109,16 +136,18 @@
             </div>
         </div>
     </div>
+
     <hr>
+
     <div class="goals-section">
         <div class="goal-card">
             <h3>My Goals</h3>
             <hr>
             <ul>
-                <li>Master Java programming and object-oriented design principles</li>
-                <li>Build a strong foundation in Java & C++ for competitive programming</li>
-                <li>Land an internship or Zoho opportunity in software development</li>
-                <li>Finish 10+ tech certifications in 2025 across multiple domains</li>
+                <li>> Master C++ with Unreal Engine for advanced game development.</li>
+                <li>> Strengthen software development skills by building real-world applications.</li>
+                <li>> Gain practical experience through projects and internships.</li>
+                <li>> Continuously expand technical knowledge to grow as a versatile IT professional.</li>
             </ul>
         </div>
 
@@ -126,8 +155,8 @@
             <h3>Exploring Opportunities</h3>
             <hr>
             <p>
-                I'm actively researching and working on open-source projects, while exploring internships, job
-                opportunities, and anything that helps me grow as a developer.
+                I'm actively exploring internships, job opportunities, open source projects and anything that helps me
+                grow as a developer.
             </p>
         </div>
     </div>
@@ -174,6 +203,41 @@
             <p>&copy; 2025 Akash V. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Looping typewriter effect for name
+        const text = "Akash";
+        const typewriterElement = document.getElementById("typewriter");
+        let index = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            if (!isDeleting && index < text.length) {
+                // Typing forward
+                typewriterElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 150);
+            } else if (!isDeleting && index === text.length) {
+                // Pause at end before deleting
+                isDeleting = true;
+                setTimeout(typeWriter, 2000);
+            } else if (isDeleting && index > 0) {
+                // Deleting backward
+                typewriterElement.textContent = text.substring(0, index - 1);
+                index--;
+                setTimeout(typeWriter, 100);
+            } else if (isDeleting && index === 0) {
+                // Pause at start before typing again
+                isDeleting = false;
+                setTimeout(typeWriter, 500);
+            }
+        }
+
+        // Start typewriter effect when page loads
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 500);
+        });
+    </script>
 </body>
 
 </html>

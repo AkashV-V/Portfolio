@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 :target {
-  scroll-margin-top: 100px;
+    scroll-margin-top: 100px;
 }
 
 * {
@@ -586,17 +586,36 @@ footer h2 {
 
 /* ---------- Smooth Scroll Sections ---------- */
 #projects {
-  scroll-margin-top: 100px;
+    scroll-margin-top: 100px;
 }
 
 #skills {
-  scroll-margin-top: 100px;
+    scroll-margin-top: 100px;
 }
 
 #about {
-  scroll-margin-top: 100px;
+    scroll-margin-top: 100px;
 }
 
 #contact {
-  scroll-margin-top: 100px;
+    scroll-margin-top: 100px;
+}
+
+.typewriter {
+    display: inline-block;
+    border-right: 2px solid #fff;
+    padding-right: 5px;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #fff;
+    }
 }
