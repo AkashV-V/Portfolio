@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
 html {
   scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 100px;
 }
 
 * {
@@ -161,9 +166,9 @@ nav {
 
     /* Keep nav links in one row */
     .nav-links {
-        flex-direction: row;          /* 👈 keep horizontal */
-        flex-wrap: wrap;              /* 👈 allow wrapping if too long */
-        justify-content: center;      /* 👈 center align */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
         margin-top: 15px;
     }
@@ -213,7 +218,7 @@ nav {
     }
 
     .nav-links {
-        flex-wrap: wrap;              /* 👈 ensure it wraps gracefully */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -221,8 +226,6 @@ nav {
         font-size: 34px;
     }
 }
-
-
 
 .location {
     display: flex;
@@ -256,9 +259,7 @@ hr {
 .history {
     display: flex;
     align-items: center;
-    /* vertically center arrow with text */
     gap: 45px;
-    /* space between text and arrow */
     font-family: 'Inter Tight', sans-serif;
     font-size: 30px;
     color: white;
@@ -271,6 +272,7 @@ hr {
     transition: 0.5s;
     cursor: pointer;
 }
+
 .projects {
     margin-top: 50px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -282,6 +284,7 @@ hr {
     color: #ddd;
     margin-bottom: 20px;
 }
+
 .project-item {
     background-color: #222;
     border-radius: 10px;
@@ -292,12 +295,12 @@ hr {
     padding-bottom: 30px;
     margin-right: 20px;
 }
+
 .project-item:hover {
     background-color: #2a2a2a;
     transition: 0.5s;
     cursor: default;
     border: 1px solid #b2b2b2;
-
 }
 
 .project-list {
@@ -313,6 +316,7 @@ hr {
     margin-top: 30px;
     margin-right: 5.5%;
 }
+
 .project-list button {
     background-color: #444;
     color: #fff;
@@ -323,9 +327,11 @@ hr {
     font-size: 16px;
     margin-top: 10px;
 }
+
 .project-list button:hover {
     background-color: #555;
 }
+
 .project-list svg {
     width: 20px;
     height: 20px;
@@ -333,6 +339,7 @@ hr {
     fill: #fff;
     vertical-align: middle;
 }
+
 .skillsh2 {
     font-size: 30px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -345,11 +352,11 @@ hr {
 
 .skills-container {
     display: flex;
-    gap: 40px; /* space between skill boxes */
+    gap: 40px;
     justify-content: space-between;
     margin-left: 8.9%;
     margin-right: 5.5%;
-    flex-wrap: wrap; /* allows responsive wrap */
+    flex-wrap: wrap;
 }
 
 .skills {
@@ -363,19 +370,19 @@ hr {
     background-color: #1a1a1a;
     box-sizing: border-box;
     margin-bottom: 70px;
-    
 }
+
 .skills p {
     font-size: 22px;
     text-align: center;
     margin-bottom: 15px;
     color: #ddd;
 }
+
 .skills hr {
     border: 0.5px solid #555555;
     margin-top: 10px;
     margin-bottom: 20px;
-    
 }
 
 .skill-list {
@@ -387,8 +394,8 @@ hr {
     line-height: 40px;
     margin-top: 30px;
     list-style: none;
-    
 }
+
 .skill-list li {
     background-color: #444;
     padding: 0px 15px;
@@ -447,7 +454,6 @@ hr {
     border: 0.5px solid #333;
     margin-bottom: 15px;
     margin-top: 5px;
-
 }
 
 .goal-card ul {
@@ -488,7 +494,7 @@ footer {
     position: relative;
 }
 
-    /*Contact links */
+/* Contact links */
 .footer-contact {
     display: flex;
     justify-content: center;
@@ -571,11 +577,26 @@ footer::before {
         font-size: 13px;
     }
 }
+
 footer h2 {
     font-size: 24px;
     margin-bottom: 40px;
     color: #ddd;
 }
+
+/* ---------- Smooth Scroll Sections ---------- */
 #projects {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
+}
+
+#skills {
+  scroll-margin-top: 100px;
+}
+
+#about {
+  scroll-margin-top: 100px;
+}
+
+#contact {
+  scroll-margin-top: 100px;
 }
