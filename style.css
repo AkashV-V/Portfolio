@@ -257,7 +257,7 @@ hr {
 }
 
 .history {
-    display: flex;
+    display: inline-block;
     align-items: center;
     gap: 45px;
     font-family: 'Inter Tight', sans-serif;
@@ -618,4 +618,13 @@ footer h2 {
     50% {
         border-color: #fff;
     }
+}
+.history a {
+  color: inherit;        /* Inherit the text color from parent (same as h2) */
+  text-decoration: none; /* Remove underline */
+}
+
+.history a:hover {
+  color: inherit;        /* Keep same color on hover */
+  text-decoration: none; /* No underline on hover */
 }

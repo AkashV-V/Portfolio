@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akash V | History - Coming Soon</title>
+  <link rel="icon" href="https://akashv-v.github.io/Portfolio/images/Letter%20A.jpeg" type="image/jpeg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      line-height: 1.6;
+      padding: 20px;
+      font-family: 'Roboto Condensed', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .header-title {
+      font-family: "Inter", sans-serif;
+      font-size: 24px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .header-title:hover {
+      color: #aaa9a9;
+    }
+
+    .back-btn {
+      background-color: #333333;
+      color: #ffffff;
+      border: 1px solid #555555;
+      padding: 10px 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.5s;
+    }
+
+    .back-btn:hover {
+      background-color: #444444;
+      border-color: #b2b2b2;
+    }
+
+    /* ---------- Coming Soon Container ---------- */
+    .coming-soon-container {
+      text-align: center;
+      max-width: 600px;
+      margin-top: 80px;
+    }
+
+    .construction-icon {
+      font-size: 100px;
+      margin-bottom: 30px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .coming-soon-title {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 60px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ffffff, #b2b2b2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .coming-soon-subtitle {
+      font-size: 24px;
+      color: #aaa9a9;
+      margin-bottom: 15px;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .coming-soon-description {
+      font-size: 18px;
+      color: #ddd;
+      line-height: 1.8;
+      margin-bottom: 50px;
+    }
+
+    .building-progress {
+      background-color: #1a1a1a;
+      border: 1px solid #333333;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 50px;
+    }
+
+    .progress-label {
+      font-size: 16px;
+      color: #b2b2b2;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background-color: #333333;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #b2b2b2, #ffffff);
+      width: 65%;
+      border-radius: 10px;
+      animation: loading 1.5s ease-in-out infinite;
+    }
+
+    @keyframes loading {
+      0%, 100% {
+        width: 65%;
+      }
+      50% {
+        width: 75%;
+      }
+    }
+
+    .progress-text {
+      font-size: 14px;
+      color: #aaa9a9;
+      text-align: center;
+    }
+
+    /* ---------- Timeline Preview ---------- */
+    .timeline-preview {
+      background-color: #1a1a1a;
+      border: 1px solid #333333;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 50px;
+      text-align: left;
+    }
+
+    .preview-title {
+      font-size: 20px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .preview-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .preview-dot {
+      width: 12px;
+      height: 12px;
+      background-color: #b2b2b2;
+      border-radius: 50%;
+      margin-top: 4px;
+      flex-shrink: 0;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(178, 178, 178, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(178, 178, 178, 0);
+      }
+    }
+
+    .preview-text {
+      font-size: 16px;
+      color: #ddd;
+    }
+
+    .preview-text strong {
+      color: #ffffff;
+    }
+
+    /* ---------- CTA Section ---------- */
+    .cta-section {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      padding: 12px 30px;
+      border-radius: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.5s;
+      border: 1px solid transparent;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-primary {
+      background-color: #ffffff;
+      color: #121212;
+      font-weight: 600;
+    }
+
+    .cta-primary:hover {
+      background-color: #b2b2b2;
+      transform: translateY(-3px);
+    }
+
+    .cta-secondary {
+      background-color: transparent;
+      color: #ffffff;
+      border: 1px solid #555555;
+    }
+
+    .cta-secondary:hover {
+      border-color: #b2b2b2;
+      background-color: #1a1a1a;
+    }
+
+    /* ---------- Responsive Design ---------- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .coming-soon-title {
+        font-size: 40px;
+      }
+
+      .coming-soon-subtitle {
+        font-size: 20px;
+      }
+
+      .coming-soon-container {
+        margin-top: 100px;
+      }
+
+      .construction-icon {
+        font-size: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .coming-soon-title {
+        font-size: 32px;
+      }
+
+      .coming-soon-subtitle {
+        font-size: 18px;
+      }
+
+      .construction-icon {
+        font-size: 60px;
+        margin-bottom: 20px;
+      }
+
+      .cta-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="header-title" onclick="window.location.href='index.html'">Akash V</h1>
+    <a href="index.html" class="back-btn">
+      <span>←</span> Back to Portfolio
+    </a>
+  </header>
+
+  <div class="coming-soon-container">
+    <div class="construction-icon">🏗️</div>
+    
+    <h1 class="coming-soon-title">Coming Soon</h1>
+    <h2 class="coming-soon-subtitle">My History & Background</h2>
+    
+    <p class="coming-soon-description">
+      I'm currently building my history page to showcase my journey, background, and milestones. 
+      Check back soon for an exciting timeline of my growth!
+    </p>
+
+    <!-- Building Progress -->
+    <div class="building-progress">
+      <div class="progress-label">Page Building Progress</div>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="progress-text">65% Complete - Almost there! ✨</div>
+    </div>
+
+    <!-- Timeline Preview -->
+    <div class="timeline-preview">
+      <div class="preview-title">What's Coming:</div>
+      
+      <div class="preview-item">
+        <div class="preview-dot"></div>
+        <div class="preview-text"><strong>Timeline Section</strong> - My educational journey & milestones</div>
+      </div>
+      
+      <div class="preview-item">
+        <div class="preview-dot"></div>
+        <div class="preview-text"><strong>Achievement Stats</strong> - Years of experience & projects completed</div>
+      </div>
+      
+      <div class="preview-item">
+        <div class="preview-dot"></div>
+        <div class="preview-text"><strong>Interest Tags</strong> - Technologies & areas I'm passionate about</div>
+      </div>
+      
+      <div class="preview-item">
+        <div class="preview-dot"></div>
+        <div class="preview-text"><strong>Personal Story</strong> - How I started my coding journey</div>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="cta-section">
+      <a href="index.html" class="cta-btn cta-primary">Back to Portfolio</a>
+      <a href="mailto:akasha09960@gmail.com" class="cta-btn cta-secondary">Get in Touch</a>
+    </div>
+  </div>
+</body>
+
+</html>
