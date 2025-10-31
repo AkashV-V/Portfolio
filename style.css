@@ -628,3 +628,30 @@ footer h2 {
   color: inherit;        /* Keep same color on hover */
   text-decoration: none; /* No underline on hover */
 }
+@media (max-width: 992px) {
+  .about-me {
+    max-width: 700px;
+    padding: 20px;
+  }
+
+  .about-me p {
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Mobile screens */
+@media (max-width: 600px) {
+  .about-me {
+    padding: 15px 20px;
+    margin: 20px;
+  }
+
+  .about-me hr {
+    width: 40px;
+  }
+
+  .about-me p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+}
